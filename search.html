@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索AI工具 - AI Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'">AI Hub</div>
+    </header>
+
+    <section class="hero">
+        <h1>搜索AI工具</h1>
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="输入工具名称或关键词..." 
+                   onkeyup="if(event.key === 'Enter') performSearch()">
+            <button onclick="performSearch()"><i class="fas fa-search"></i> 搜索</button>
+        </div>
+        
+        <div class="nav-container">
+            <nav>
+                <a href="index.html">全部工具</a>
+                <a href="categories.html">分类浏览</a>
+                <a href="search.html" class="active">搜索工具</a>
+            </nav>
+        </div>
+    </section>
+
+    <div class="container">
+        <div id="search-results" class="tools-container">
+            <div class="empty-state">
+                <i class="fas fa-search fa-3x"></i>
+                <p>输入关键词搜索AI工具</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 AI Hub | 全网AI工具聚合平台</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        async function performSearch() {
+            const query = document.getElementById('search-input').value.trim().toLowerCase();
+            if (!query) return;
+            
+            try {
+                const tools = await fetchToolsData();
+                const results = tools.filter(tool => 
+                    tool.name.toLowerCase().includes(query) || 
+                    tool.description.toLowerCase().includes(query) ||
+                    tool.categories.some(cat => cat.toLowerCase().includes(query))
+                );
+                
+                displaySearchResults(results);
+            } catch (error) {
+                console.error('搜索出错:', error);
+            }
+        }
+
+        function displaySearchResults(results) {
+            const container = document.getElementById('search-results');
+            
+            if (results.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <i class="fas fa-exclamation-circle fa-3x"></i>
+                        <p>没有找到匹配的工具</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            container.innerHTML = results.map(tool => `
+                <div class="tool-card">
+                    <div class="tool-icon" style="background-color: ${getRandomColor()}">
+                        <i class="fas ${tool.icon}" style="color: white; font-size: 24px;"></i>
+                    </div>
+                    <h3>${tool.name}</h3>
+                    <p>${tool.description}</p>
+                    <div class="tool-meta">
+                        <span class="heat"><i class="fas fa-fire"></i> ${tool.heat}</span>
+                        <span class="categories">${tool.categories.map(cat => `<span>${cat}</span>`).join('')}</span>
+                    </div>
+                    <a href="${tool.url}" target="_blank" class="visit-button">访问</a>
+                </div>
+            `).join('');
+        }
+    </script>
+</body>
+</html>

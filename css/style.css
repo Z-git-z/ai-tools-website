@@ -1,0 +1,376 @@
+:root {
+    --primary: #6e56cf;
+    --secondary: #ff6b6b;
+    --dark: #2e2e3a;
+    --light: #f8f9fa;
+    --gray: #e9ecef;
+    --card-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--dark);
+    background-color: var(--light);
+}
+
+/* 布局 */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 导航栏 */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--primary);
+    cursor: pointer;
+}
+
+/* 导航菜单 */
+.nav-container {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.nav-container nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.nav-container a {
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    background: rgba(110, 86, 207, 0.1);
+    color: var(--primary);
+    font-weight: 600;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.nav-container a:hover, 
+.nav-container a.active {
+    background: var(--primary);
+    color: white;
+}
+
+/* 英雄区域 */
+.hero {
+    text-align: center;
+    padding: 5rem 5%;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    color: white;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+}
+
+/* 搜索框 */
+.search-box {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    display: flex;
+    border-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.search-box input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    border: none;
+    font-size: 1rem;
+}
+
+.search-box button {
+    padding: 0 1.8rem;
+    background-color: var(--secondary);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+    background-color: #e05555;
+}
+
+/* 工具容器 */
+.tools-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+/* 工具卡片 */
+.tool-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.8rem;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: var(--card-shadow);
+    border: 1px solid rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.tool-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary);
+}
+
+.tool-icon i {
+    color: white;
+    font-size: 1.8rem;
+}
+
+.tool-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.3rem;
+    color: var(--dark);
+}
+
+.tool-card p {
+    color: #666;
+    margin: 0 0 1.5rem;
+    flex-grow: 1;
+    font-size: 0.95rem;
+}
+
+.tool-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    align-items: center;
+}
+
+.heat {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
+.categories {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.categories span {
+    display: inline-block;
+    background: #f0f0f0;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: #555;
+}
+
+/* 按钮样式 */
+.visit-button {
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    background-color: var(--primary);
+    color: white;
+    font-size: 0.95rem;
+}
+
+.visit-button:hover {
+    background-color: #5a43b5;
+    transform: translateY(-2px);
+}
+
+/* 分类筛选 */
+.category-filter {
+    text-align: center;
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+}
+
+.category-btn {
+    background-color: var(--gray);
+    color: #555;
+    padding: 0.7rem 1.4rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-size: 0.95rem;
+}
+
+.category-btn.active, 
+.category-btn:hover {
+    background-color: var(--primary);
+    color: white;
+}
+
+/* 排序控件 */
+.sort-controls {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2rem 0;
+    gap: 0.8rem;
+}
+
+.sort-btn {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--gray);
+    border-radius: 50px;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.sort-btn.active, 
+.sort-btn:hover {
+    background: var(--primary);
+    color: white;
+    border-color: var(--primary);
+}
+
+/* 空状态 */
+.empty-state {
+    text-align: center;
+    grid-column: 1 / -1;
+    padding: 5rem 0;
+    color: #888;
+}
+
+.empty-state i {
+    margin-bottom: 1.5rem;
+    font-size: 3rem;
+    opacity: 0.7;
+}
+
+.empty-state p {
+    font-size: 1.1rem;
+}
+
+/* 页脚 */
+footer {
+    text-align: center;
+    padding: 3rem 5%;
+    background-color: white;
+    margin-top: 3rem;
+    border-top: 1px solid #eee;
+}
+
+.social-links a {
+    color: #555;
+    margin: 0 0.8rem;
+    font-size: 1.3rem;
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--primary);
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .tools-container {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+    
+    .hero {
+        padding: 4rem 5%;
+    }
+    
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    .category-filter, 
+    .sort-controls {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tools-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .hero {
+        padding: 3rem 5%;
+    }
+    
+    .search-box {
+        flex-direction: column;
+        border-radius: 12px;
+    }
+    
+    .search-box input {
+        border-radius: 12px 12px 0 0;
+    }
+    
+    .search-box button {
+        border-radius: 0 0 12px 12px;
+        padding: 0.8rem;
+    }
+}

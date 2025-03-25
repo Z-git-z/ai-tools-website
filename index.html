@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具大全 - 全网热门AI工具聚合</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'">AI Hub</div>
+    </header>
+
+    <section class="hero">
+        <h1>AI工具大全</h1>
+        <p>收录全网最热门的AI工具，按热度实时排行</p>
+        
+        <div class="nav-container">
+            <nav>
+                <a href="index.html" class="active">全部工具</a>
+                <a href="categories.html">分类浏览</a>
+                <a href="search.html">搜索工具</a>
+            </nav>
+        </div>
+    </section>
+
+    <div class="container">
+        <div id="heat-ranking" class="tools-container">
+            <!-- 工具卡片将由ranking.js动态生成 -->
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 AI Hub | 全网AI工具聚合平台</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/ranking.js"></script>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI工具分类 - AI Hub</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo" onclick="window.location.href='index.html'">AI Hub</div>
+    </header>
+
+    <section class="hero">
+        <h1>AI工具分类</h1>
+        <p>按类别浏览各类AI工具</p>
+        
+        <div class="nav-container">
+            <nav>
+                <a href="index.html">全部工具</a>
+                <a href="categories.html" class="active">分类浏览</a>
+                <a href="search.html">搜索工具</a>
+            </nav>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="category-filter">
+            <button class="active" data-category="all">全部</button>
+            <button data-category="writing">写作</button>
+            <button data-category="image">图像</button>
+            <button data-category="coding">编程</button>
+            <button data-category="video">视频</button>
+            <button data-category="audio">音频</button>
+            <button data-category="productivity">效率</button>
+            <button data-category="business">商业</button>
+        </div>
+
+        <div class="sort-controls">
+            <button class="sort-btn active" data-sort="heat">
+                <i class="fas fa-fire"></i> 按热度
+            </button>
+            <button class="sort-btn" data-sort="name">
+                <i class="fas fa-sort-alpha-down"></i> 按名称
+            </button>
+        </div>
+
+        <div id="category-results" class="tools-container">
+            <!-- 工具卡片将由category.js动态生成 -->
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2023 AI Hub | 全网AI工具聚合平台</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/category.js"></script>
+</body>
+</html>

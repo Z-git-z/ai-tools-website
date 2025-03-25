@@ -1,0 +1,137 @@
+[
+  {
+    "id": 1,
+    "name": "ChatGPT",
+    "url": "https://chat.openai.com",
+    "categories": ["writing", "coding", "productivity"],
+    "heat": 98,
+    "description": "OpenAI开发的先进对话AI，可用于写作、编程辅助、创意生成等",
+    "icon": "fa-comment-dots"
+  },
+  {
+    "id": 2,
+    "name": "Midjourney",
+    "url": "https://www.midjourney.com",
+    "categories": ["image", "design"],
+    "heat": 95,
+    "description": "强大的AI艺术生成工具，通过文本提示创建令人惊叹的图像",
+    "icon": "fa-paint-brush"
+  },
+  {
+    "id": 3,
+    "name": "GitHub Copilot",
+    "url": "https://github.com/features/copilot",
+    "categories": ["coding"],
+    "heat": 92,
+    "description": "AI编程助手，实时建议代码和函数，提高开发效率",
+    "icon": "fa-code"
+  },
+  {
+    "id": 4,
+    "name": "Notion AI",
+    "url": "https://www.notion.so/product/ai",
+    "categories": ["writing", "productivity"],
+    "heat": 88,
+    "description": "智能笔记和工作空间，帮助整理思路和提升生产力",
+    "icon": "fa-sticky-note"
+  },
+  {
+    "id": 5,
+    "name": "DALL-E",
+    "url": "https://openai.com/dall-e",
+    "categories": ["image", "design"],
+    "heat": 87,
+    "description": "OpenAI的图像生成工具，从文本描述创建独特图像",
+    "icon": "fa-image"
+  },
+  {
+    "id": 6,
+    "name": "Grammarly",
+    "url": "https://www.grammarly.com",
+    "categories": ["writing"],
+    "heat": 85,
+    "description": "AI写作助手，检查语法、拼写和写作风格",
+    "icon": "fa-spell-check"
+  },
+  {
+    "id": 7,
+    "name": "Runway ML",
+    "url": "https://runwayml.com",
+    "categories": ["video", "image", "design"],
+    "heat": 82,
+    "description": "创意AI工具集，用于视频和图像编辑与生成",
+    "icon": "fa-film"
+  },
+  {
+    "id": 8,
+    "name": "Synthesia",
+    "url": "https://www.synthesia.io",
+    "categories": ["video", "business"],
+    "heat": 80,
+    "description": "AI视频生成平台，使用虚拟主播创建专业视频内容",
+    "icon": "fa-video"
+  },
+  {
+    "id": 9,
+    "name": "Otter.ai",
+    "url": "https://otter.ai",
+    "categories": ["audio", "productivity"],
+    "heat": 78,
+    "description": "AI会议记录和转录工具，实时记录和总结对话",
+    "icon": "fa-microphone"
+  },
+  {
+    "id": 10,
+    "name": "DeepL",
+    "url": "https://www.deepl.com",
+    "categories": ["writing"],
+    "heat": 76,
+    "description": "高质量的AI翻译工具，支持多种语言互译",
+    "icon": "fa-language"
+  },
+  {
+    "id": 11,
+    "name": "Jasper",
+    "url": "https://www.jasper.ai",
+    "categories": ["writing", "business"],
+    "heat": 75,
+    "description": "AI写作助手，专为营销内容和商业写作设计",
+    "icon": "fa-pen-fancy"
+  },
+  {
+    "id": 12,
+    "name": "Descript",
+    "url": "https://www.descript.com",
+    "categories": ["audio", "video"],
+    "heat": 72,
+    "description": "AI音频和视频编辑工具，支持文字编辑媒体内容",
+    "icon": "fa-edit"
+  },
+  {
+    "id": 13,
+    "name": "Murf",
+    "url": "https://murf.ai",
+    "categories": ["audio"],
+    "heat": 70,
+    "description": "AI语音生成器，创建自然流畅的语音内容",
+    "icon": "fa-volume-up"
+  },
+  {
+    "id": 14,
+    "name": "Copy.ai",
+    "url": "https://www.copy.ai",
+    "categories": ["writing", "business"],
+    "heat": 68,
+    "description": "AI文案写作工具，帮助生成营销内容和广告文案",
+    "icon": "fa-copy"
+  },
+  {
+    "id": 15,
+    "name": "Beautiful.ai",
+    "url": "https://www.beautiful.ai",
+    "categories": ["design", "business"],
+    "heat": 65,
+    "description": "AI演示文稿设计工具，自动创建专业幻灯片",
+    "icon": "fa-presentation"
+  }
+]
